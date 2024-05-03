@@ -1,0 +1,22 @@
+{
+    "name": "sotham/blog_php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Sotham\\BlogPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sotham",
+            "email": "lanches.thomas@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "filp/whoops": "^2.15",
+        "friendsofphp/php-cs-fixer": "^3.54"
+    },
+    "require": {
+        "twig/twig": "^3.9"
+    }
+}
