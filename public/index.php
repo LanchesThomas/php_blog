@@ -9,4 +9,3 @@ $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
 $whoops->register();
 
 require '../src/Controller/FrontOffice/HomeController.php';
-
