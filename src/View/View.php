@@ -1,6 +1,14 @@
 <?php
 
-require '../vendor/autoload.php';
+namespace App\View;
 
-$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../templates/');
-$twig   = new \Twig\Environment($loader, []);
+class View
+{
+    public function getTwig()
+    {
+
+        $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../templates/');
+        $twig   = new \Twig\Environment($loader, []);
+        return $twig;
+    }
+}
