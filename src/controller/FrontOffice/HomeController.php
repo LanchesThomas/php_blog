@@ -1,17 +1,25 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\FrontOffice;
 
 use App\View\View;
 
+
 class HomeController
 {
-    public function homeView()
+    public function __construct(private View $view)
     {
-        $view = new View();
-        $twig = $view->getTwig();  // Obtenez l'instance de Twig
-        return $twig->render('home.twig');
+        
     }
-}
 
-require __DIR__ . '../../../templates/frontoffice/homepage.html.twig';
+    public function displayPage(): string
+    {
+        
+           // $twig = $this->view->render();
+            // echo $twig->render('frontoffice/homepage.html.twig', ['name' => 'Fabien']);
+            return $this->view->render(['template'=> 'home', 'data' => []]);
+    }
+
+    
+}
+?>

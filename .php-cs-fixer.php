@@ -2,9 +2,7 @@
 
 return (new PhpCsFixer\Config())
     ->setRules([
-        'class_definition' => [
-            'singleLine'     => true
-        ],
+       
         'constant_case'                          => true,
         '@PSR12'                                 => true,
         'array_indentation'                      => true,

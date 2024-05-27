@@ -2,16 +2,24 @@
 
 namespace App\Service;
 
-use App\Controller\HomeController;
-
+use App\Controller\FrontOffice\HomeController;
+use App\View\View;
 class Router
 {
 
-    public function getUrl()
+    private View $view;
+
+    public function __construct()
     {
-        if (isset($_GET['action']) && $_GET['action'] !== '') {
-        } else {
-            new HomeController;
-        }
+        $this->view = new View();
+    }
+
+    public function run()
+    {
+        $action = $_GET['action'] ? $_GET['action'] : 'home';
+        if ($action === 'home') {
+            $homeController = new HomeController($this->view);
+            return $homeController->displayPage();
+        } 
     }
 }
