@@ -1,0 +1,5 @@
+Correctif
+vendor/bin/phpcbf --standard=PSR12 src 
+
+Diagnostic 
+vendor/bin/phpcs --standard=PSR12 src 

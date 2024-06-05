@@ -7,9 +7,9 @@ use App\Controller\FrontOffice\ConnexionController;
 use App\Controller\FrontOffice\HomeController;
 use App\Controller\FrontOffice\LoginController;
 use App\View\View;
+
 class Router
 {
-
     private View $view;
 
     public function __construct()
@@ -23,7 +23,7 @@ class Router
         if ($action === 'home') {
             $homeController = new HomeController($this->view);
             return $homeController->displayPage();
-        } 
+        }
 
         if ($action === 'blog') {
             $blogController = new BlogController($this->view);
@@ -39,7 +39,5 @@ class Router
             $loginController = new LoginController($this->view);
             return $loginController->displayPage();
         }
-
-
     }
 }
