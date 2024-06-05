@@ -17,7 +17,6 @@
         "friendsofphp/php-cs-fixer": "^3.54"
     },
     "require": {
-        "twig/twig": "^3.9",
-        "twbs/bootstrap": "5.3.3"
+        "twig/twig": "^3.9"
     }
 }
